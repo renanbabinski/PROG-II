@@ -3,6 +3,7 @@
 body{
 	font-family: arial, sans-serif, monospace;
 	margin: 0;
+	font-size: 1.2em;
 }
 
 header, footer {
@@ -26,7 +27,7 @@ h1, footer {
 }
 
 header p, h2{
-	color: #AC653B
+	color: black;
 }
 
 /* links */
