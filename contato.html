@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="pt-br">
 	<head>
+		<link rel="stylesheet" href="estilos.css">
 		<title>Curriculum</title>
 		<meta charset="utf-8">
 		<meta name="description" content="Página de Exemplo">
@@ -23,14 +24,22 @@
 
 		<main>
 			<h2>Contato</h2>
+
+			<details>
+				<summary>
+					Ver endereço completo
+				</summary>
+				<p>Rua Vereador eduardo Solivo, 198, Centro, Nova Erechim, Santa Catarina</p>
+			</details>
+
 			<form action="" method="get">
 				<div>
 					<label for="nome">Nome:</label>
-					<input type="text" name="nome" id="nome" size="50" maxlength="50">
+					<input type="text" name="nome" id="nome" size="50" maxlength="50" autofocus required>
 				</div>
 				<div>
 					<label for="email">E-mail</label>
-					<input type="email" name="email" id="email" size="50" maxlength="50">
+					<input type="email" name="email" id="email" size="50" maxlength="50" autocomplete="on">
 				</div>
 				<div>
 					<label for="fone">Telefone</label>
@@ -73,6 +82,7 @@
 					<input type="submit" name="botao" value="Confirmar">
 					<input type="reset" name="reset" value="Limpar Campos">
 				</div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d20089.828329066557!2d-52.70099794899324!3d-27.11178424012485!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1554160258941!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0" allowfullscreen></iframe>
 			</form>
 			
 

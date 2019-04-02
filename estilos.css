@@ -1,0 +1,74 @@
+/* formatações gerais */
+
+body{
+	font-family: arial, sans-serif, monospace;
+	margin: 0;
+}
+
+header, footer {
+	background-color: #4B7990;
+}
+
+nav {
+	background-color: #1A7299;
+}
+
+main {
+	background-color: #EEEEEE;
+}
+
+header, footer, nav, main {
+	padding: 10px;
+}
+
+h1, footer {
+	color: #D7C16F;
+}
+
+header p, h2{
+	color: #AC653B
+}
+
+/* links */
+
+a {
+	text-decoration: none;
+}
+a:link {
+	color: #574400;
+}
+a:visited {
+	color: #572000;
+}
+a:active {
+	color: lightblue;
+}
+a:hover {
+	color: #143055;
+	text-shadow: 3px 3px 5px white;
+}
+
+nav ul li {
+	display: inline;
+	padding: 10px;
+	text-transform: uppercase;
+}
+
+/* tabelas */
+
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th{
+	background-color: #AC653B;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #FFEEAF
+}
+tr:nth-child(odd){
+	background-color: #DDD;
+}
