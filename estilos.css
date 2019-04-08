@@ -73,3 +73,28 @@ tr:nth-child(even){
 tr:nth-child(odd){
 	background-color: #DDD;
 }
+
+/* formulários */
+
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+	border: 2px solid #826B16;
+	margin: 10px 0px;
+	border-radius: 10px;
+	padding: 5px 20px;
+	background-color: #EEE;
+	color: #AC653B;
+	font-family: monospace;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
+	border: 2px solid #572000;
+	margin: 10px 0px;
+	background-color: #CCC;
+	font-weight: bold;
+}
+
+input[type="submit"], input[type="reset"]{
+	background-color: darkblue
+	color: #CCC;
+}
+
