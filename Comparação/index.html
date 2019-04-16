@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,0">
     <style>
+
+    *{
+        box-sizing: border-box;
+    }
+
     body{
         font-family: "Lucida Sans", sans-serif;        
     }
@@ -37,6 +42,17 @@
     #col-1, #col-2, #col-3 { /*mobie first*/
         width: 100%;
         float: left;
+        padding: 15px;
+    }
+
+    #contato{
+        position: fixed;
+        bottom: 0;
+        right: 40px;
+        width: 400px;
+        background-color: pink;
+        padding: 20px;
+        display: none;
     }
 
     @media only screen and (min-width: 600px){ /*tablet*/
@@ -45,6 +61,9 @@
         }
         #col-2{
             width: 80%;
+        }
+        #contato{
+            display: block; /*para voltar a exibir a div contato*/
         }
     }
 
@@ -55,6 +74,9 @@
         #col-3{
             width: 20%;
         }
+        #contato{
+            display: block; /*para voltar a exibir a div contato*/
+        }
     }
 
     footer{
@@ -64,11 +86,35 @@
     nav li:hover{
         background-color: #0099CC;
     }      
+
+    #img1{
+        float: right;
+    }
+    #img2{
+        float: left;
+    }
+    #img1,#img2{
+        width: 20%;
+        max-width: 750px;
+    }
+
+    #titulo{
+        position: relative;
+        top: 20px;
+    }
+
+    #login{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+
     </style>
 </head>
 <body>
     <header>
-      <h1>Ciência da Computação</h1>
+      <h1 id="titulo">Ciência da Computação</h1>
       <div id="login">Já é aluno? Faça seu login!</div>
     </header>
 
@@ -86,9 +132,11 @@
 
         <section id="col-2">
             <h1>Ciência da Computação</h1>
+            <img id="img1" src="curso-online-de-ciência-da-computação.jpg" >
             <p>O curso de Graduação em Ciência da Computação – Bacharelado da UFFS oferece 100  vagas anuais no campus de Chapecó (SC), sendo 50  no turno noturno e 50 no matutino (vespertino a partir de 2017.1). A carga horária total do curso é de 3.090 horas distribuídas em 8 (matutino) e 10 (noturno) semestres letivos.</p>
             <p>Esse curso vem responder às demandas de desenvolvimento e crescimento regionais e a consequente carência de profissionais da computação capazes de atuar de forma proativa na área de tecnologia da informação (ou computação) no oeste catarinense, bem como nas demais regiões brasileiras.</p>
-            <p>O Curso de Ciência da Computação da UFFS é um curso que pretende, através de bases sólidas da área de computação, formar cientistas capazes de terem um papel importante em áreas da tecnologia da informação (TI), tanto na indústria quanto na academia. O curso oferece várias opções para o estudante se aprofundar: banco de dados, computação gráfica, redes de computadores, engenharia de software, hardware e teoria da computação. Todos os professores se dedicam integralmente ao curso e todos possuem no mínimo o título de mestre, sendo que aproximadamente a metade tem o título de doutor. Esse perfil dos professores faz com que os estudantes tenham contato com assuntos de ponta da computação. Os estudantes têm acesso aos projetos de pesquisa e de extensão do curso, experiência profissional através do projeto FronteiraTec, além de várias opções de estágios em empresas da região.</p>            
+            <p>O Curso de Ciência da Computação da UFFS é um curso que pretende, através de bases sólidas da área de computação, formar cientistas capazes de terem um papel importante em áreas da tecnologia da informação (TI), tanto na indústria quanto na academia. O curso oferece várias opções para o estudante se aprofundar: banco de dados, computação gráfica, redes de computadores, engenharia de software, hardware e teoria da computação. Todos os professores se dedicam integralmente ao curso e todos possuem no mínimo o título de mestre, sendo que aproximadamente a metade tem o título de doutor. Esse perfil dos professores faz com que os estudantes tenham contato com assuntos de ponta da computação. Os estudantes têm acesso aos projetos de pesquisa e de extensão do curso, experiência profissional através do projeto FronteiraTec, além de várias opções de estágios em empresas da região.</p>
+            <img id="img2" src="curso-online-de-ciência-da-computação.jpg" >
             <p>O bacharel egresso do curso de Graduação em Ciência da Computação será um profissional qualificado para a pesquisa e desenvolvimento na área de computação, na construção de projeto de software básico e também para o uso de sistemas computadorizados em outras áreas da atividade humana, a fim de viabilizar ou aumentar a produtividade e a qualidade de todos os tipos de procedimentos.</p>
             <p>Saiba mais visitando o site da UFFS</p>
         </section>
