@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo de JavaScript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p id="exemplo">Texto Inicial</p>
+	<script>
+		alert("Olá Mundo");
+		document.write("Mensagem escrita pelo JS");
+		console.log("Mensagem para o console");
+		document.getElementById("exemplo").innerHTML = "texto alterado";
+	</script>
+
+	<p id="exemplo2"></p>
+	<button onclick="document.getElementById('exemplo2').innerHTML = 'voce clicou no botão'">Clica ae</button>
+
+
+</body>
+</html>
