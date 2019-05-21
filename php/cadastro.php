@@ -1,3 +1,45 @@
+<?php 
+
+if(isset($_POST['cadastrar'])){
+$nome = $_POST['nome'];
+$tipo = $_POST['tipo'];
+$local = $_POST['local'];
+$descricao = $_POST['descricao'];
+$totalIngressos = $_POST['totalIngressos'];
+$valor = $_POST['valor'];
+$data = $_POST['data'];
+$hora = $_POST['hora'];
+$venda = $_POST['venda'];
+
+$sql = "insert into evento
+		(nome, tipo, local, descricao, totalIngressos, valor, data, hora, vendaAberta)
+		values
+		('$nome', $tipo, '$local', '$descricao', $totalIngressos, $valor, '$data', '$hora', $venda)";
+
+
+
+// echo $sql;
+
+include_once "includes/conexao.php";
+
+if (mysqli_query($conexao, $sql)) {
+	echo "Cadastro realizado com sucesso";
+}else{
+	echo "Ocorreu um erro no cadastro";
+	echo mysqli_error($conexao);
+}
+echo "<p><a href=\"cadastro.php\">Voltar</a></p>";
+die();    //interrompe o script
+
+
+
+
+
+
+
+}
+ ?>
+
 <h1>Cadastro de evento</h1>
 <form action="" method="post">
 	<div>
