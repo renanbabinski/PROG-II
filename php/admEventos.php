@@ -1,6 +1,7 @@
 <?php header("Content-type: text/html; charset=utf-8");
 include_once "includes/conexao.php";
-$sql = "select nome, tipo, date_format(data, '%d/%m/%y') as data, ((totalVendidos/totalIngressos) * 100) as Vendidos, vendaAberta from evento order by data desc";
+include_once "includes/functions.php";
+$sql = "select nome, tipo, local, date_format(data, '%d/%m/%y') as data, ((totalVendidos/totalIngressos) * 100) as Vendidos, vendaAberta from evento order by data desc";
 $resultado = mysqli_query($conexao, $sql);
  ?>
 
@@ -22,6 +23,7 @@ if(mysqli_num_rows($resultado) == 0){
 		<th>Nome</th>
 		<th>Tipo</th>
 		<th>Data</th>
+		<th>Local</th>
 		<th>Vendidos</th>
 		<th>Venda Aberta</th>
 	</tr>
@@ -32,10 +34,11 @@ if(mysqli_num_rows($resultado) == 0){
 
 	<tr>
 		<td><?=$evento['nome']?></td>
-		<td><?=$evento['tipo']?></td>
+		<td><?=exibeTipo($evento['tipo'])?></td>
 		<td><?=$evento['data']?></td>
-		<td><?=$evento['Vendidos']?></td>
-		<td><?=$evento['vendaAberta']?></td>
+		<td><?=$evento['local']?></td>
+		<td><?=exibePorcentagem($evento['Vendidos'])?></td>
+		<td><?=exibeVendaAberta($evento['vendaAberta'])?></td>
 	</tr>
 
 
@@ -49,3 +52,14 @@ if(mysqli_num_rows($resultado) == 0){
 <?php
 } //fecha else
   ?>
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ </head>
+ <body>
+ 	<a href="cadastro.php">Cadastrar um evento</a>
+ 
+ </body>
+ </html>
